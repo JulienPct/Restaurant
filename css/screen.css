@@ -103,6 +103,12 @@ img {
     max-width: 960px;
 }
 
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1150px;
+}
+
 .block {
     margin-bottom: 50px;
 }
@@ -121,6 +127,12 @@ img {
 
 .block-centered {
     text-align: center;
+}
+
+.block-centered .block-body {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
@@ -162,12 +174,76 @@ img {
     text-decoration: underline;
 }
 
+.ingredients-menu {
+    font-weight: 600;
+    color: #383838;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.ingredients-menu a {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+.ingredients-menu a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    opacity: 0;
+    background: #C89446;
+    transition: .3s;
+}
+
+.ingredients-menu .active::after,
+.ingredients-menu a:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.menu-summary-item {
+    padding-left: 120px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.menu-summary-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+.menu-summary-title {
+    font-size: 1.125rem;
+    color: #383838;
+    font-weight: 700;
+    padding-bottom: .75rem;
+    margin-bottom: 0;
+}
+
+.menu-summary p {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: .875rem;
+}
+
+.menu-summary-price {
+    font-size: 2.5rem;
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    line-height: 1;
+}
+
 @media only screen and (min-width: 540px) {
     html {
         font-size: 16px;
-    }
-    body {
-        background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../screenshot.png) top center no-repeat;
     }
     .logo {
         margin-bottom: 0;
@@ -204,6 +280,9 @@ img {
     .block {
         margin-bottom: 100px;
     }
+    .block-last {
+        margin-bottom: 60px;
+    }
     .block-left,
     .block-right {
         justify-content: space-between;
@@ -212,7 +291,6 @@ img {
     }
     .block-img {
         border: none;
-        /* flex: none; */
         position: relative;
     }
     .block-img::before {
@@ -261,5 +339,59 @@ img {
     }
     .home-section {
         background: fixed top 95px right 0px url(../img/oranges.jpg) no-repeat, fixed top 640px left 0px url(../img/spices.jpg) no-repeat;
+    }
+    .ingredients-menu a {
+        margin: 0 32px;
+    }
+    .menu-summary {
+        position: relative;
+        padding: 85px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .menu-summary-item {
+        padding-left: 192px;
+        width: calc(50% - 40px);
+        margin-bottom: 110px;
+    }
+    .menu-summary-item:nth-child(even) {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 192px;
+    }
+    .menu-summary-item:nth-child(even) .menu-summary-img {
+        left: auto;
+        right: 0;
+    }
+    .menu-summary-item:nth-child(even) .menu-summary-price {
+        margin-left: auto;
+    }
+    .menu-summary-img {
+        width: 160px;
+    }
+    .menu-summary-title {
+        margin-top: 0;
+        line-height: 1.2;
+        background: #FFF;
+    }
+    .menu-summary p {
+        background: #FFF;
+    }
+    .menu-summary-price {
+        padding-top: 4px;
+        width: 85px;
+        background: #FFF;
+    }
+    .menu-summary::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        display: block;
+        width: 420px;
+        height: 420px;
+        border: solid 1px #C89446;
+        transform: translate(-50%, -260px) rotate(45deg);
     }
 }
