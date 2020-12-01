@@ -1,721 +1,865 @@
-/*
+    /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
-
-*,
-*::before,
-*::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-}
-
-body {
-    line-height: 1.625;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #6F6F6F;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    -webkit-transition: color .3s;
-    -o-transition: color .3s;
-    transition: color .3s;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.92)), color-stop(39.24%, rgba(54, 54, 54, 0.5)), to(rgba(28, 28, 28, 0.4))), url(../img/eggs.jpg) center center / cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/eggs.jpg) center center / cover no-repeat;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/eggs.jpg) center center / cover no-repeat;
-    color: #FFF;
-}
-
-.topbar {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 18px 20px;
-}
-
-.menu-item:hover {
-    color: #C89446;
-}
-
-.logo {
-    margin-bottom: 15px;
-}
-
-.menu-item {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.baseline {
-    padding: 50px 0 70px 0;
-    text-align: center;
-    line-height: 1;
-}
-
-.baseline-welcome {
-    font-family: 'Pinyon Script', sans-serif;
-    color: #C89446;
-    font-size: 2.2rem;
-    display: block;
-}
-
-.baseline-name {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    padding-bottom: 10px;
-}
-
-.baseline-slogan {
-    font-size: 1rem;
-    font-weight: 300;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.menu-button {
-    border: solid 1px #C89446;
-    padding: 7px 10px;
-    -webkit-transition-property: color, background-color;
-    -o-transition-property: color, background-color;
-    transition-property: color, background-color;
-    margin-top: 5px;
-}
-
-.menu-button:hover {
-    background: #C89446;
-    color: #FFF;
-}
-
-.home-section {
-    padding-top: 9px;
-}
-
-.container-small {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 960px;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1150px;
-}
-
-.block {
-    margin-bottom: 50px;
-}
-
-.block-img {
-    max-width: 350px;
-    margin: 0 auto;
-    border: solid 1px #C89446;
-}
-
-.block-img img {
-    display: block;
-    position: relative;
-    z-index: 1;
-}
-
-.block-centered {
-    text-align: center;
-}
-
-.block-centered .block-body {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.title {
-    font-size: 1.75rem;
-    line-height: 1.1;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 700;
-    margin-top: 1rem 0 0 0;
-}
-
-.title span {
-    display: block;
-    font-family: 'Pinyon Script', serif;
-    color: #C89446;
-    font-size: 2.5rem;
-    text-transform: none;
-}
-
-.title::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 2px;
-    background: #C89446;
-    margin-bottom: 0.5rem;
-}
-
-.more {
-    color: #C89446;
-}
-
-.more a::after {
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 9px;
-    margin-left: .7em;
-    background: url(../img/arrow-right.svg) center center no-repeat;
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    -o-transition: transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
-}
-
-.more a:hover {
-    text-decoration: underline;
-}
-
-.more a:hover::after {
-    -webkit-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    transform: translateX(3px);
-}
-
-.ingredients-menu {
-    font-weight: 600;
-    color: #383838;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 40px 0;
-}
-
-.ingredients-menu a {
-    display: inline-block;
-    margin: 0 5px;
-    position: relative;
-}
-
-.ingredients-menu a::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    opacity: 0;
-    background: #C89446;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-}
-
-.ingredients-menu .active::after,
-.ingredients-menu a:hover::after {
-    bottom: 0;
-    opacity: 1;
-}
-
-.menu-summary-item {
-    padding-left: 120px;
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.menu-summary-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-}
-
-.menu-summary-title {
-    font-size: 1.125rem;
-    color: #383838;
-    font-weight: 700;
-    padding-bottom: .75rem;
-    margin-bottom: 0;
-}
-
-.menu-summary p {
-    margin: 0;
-    padding-bottom: 1rem;
-    font-size: .875rem;
-}
-
-.menu-summary-price {
-    font-size: 2.5rem;
-    font-family: 'Pinyon Script', serif;
-    color: #C89446;
-    line-height: 1;
-}
-
-.reservation {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.92)), color-stop(39.24%, rgba(54, 54, 54, 0.5)), to(rgba(28, 28, 28, 0.4))), url(../img/reservation.jpg) center center / cover no-repeat;
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/reservation.jpg) center center / cover no-repeat;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/reservation.jpg) center center / cover no-repeat;
-    color: rgba(255, 255, 255, .6);
-    padding: 50px 0;
-}
-
-.reservation .title {
-    color: #FFF;
-}
-
-.reservation input,
-.reservation select {
-    padding: 0 .5rem;
-    width: 100%;
-    margin-bottom: 15px;
-    border: solid 1px #6F6F6F;
-    background: transparent;
-    text-transform: uppercase;
-    height: 40px;
-    font-size: .875rem;
-    color: #FFF;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    -webkit-transition: background-color .3s, border-color .3s;
-    -o-transition: background-color .3s, border-color .3s;
-    transition: background-color .3s, border-color .3s;
-    font-family: 'Source Sans Pro', serif;
-    border-radius: 2px;
-}
-
-.reservation input:focus,
-.reservation select:focus {
-    border-color: #C89446;
-    background-color: rgba(255, 255, 255, .1);
-}
-
-.reservation select {
-    background: no-repeat right 0.5rem center url(../img/select.svg);
-}
-
-.reservation .button {
-    width: 100%;
-}
-
-.button {
-    font-weight: 600;
-    font-size: .875rem;
-    color: #FFF;
-    background: #C89446;
-    border: none;
-    padding: 11px 1rem;
-    border: solid 1px transparent;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-}
-
-.button:hover {
-    background: transparent;
-    border: solid 1px #C89446;
-}
-
-.reservation p {
-    max-width: 625px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.reservation .block-centered .block-body {
-    max-width: 825px;
-}
-
-select option {
-    color: #000;
-}
-
-.recipes {
-    padding: 50px 0;
-    background: no-repeat top left / 80vw auto url(../img/news-bg.jpg);
-}
-
-.recipes .more {
-    text-align: right;
-    display: block;
-    margin-top: 60px;
-}
-
-.recipes-list {
-    font-weight: 300;
-    font-size: 1.125rem;
-    max-width: 921px;
-    margin-left: auto;
-}
-
-.recipes-list strong {
-    color: #383838;
-    font-weight: 700;
-}
-
-.recipes-date strong {
-    font-size: 1.75rem;
-    display: block;
-    line-height: 1.2;
-}
-
-.recipes-list-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-bottom: solid 1px #F2F2F2;
-    margin-top: 1em;
-    padding-bottom: 1em;
-}
-
-.recipes-list-item p {
-    margin: 0;
-}
-
-.recipes-list-item:last-child {
-    border-bottom: 0;
-}
-
-.recipes-date {
-    width: 60px;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-    line-height: 1;
-}
-
-.map {
-    width: 100%;
-    height: 460px;
-}
-
-.footer {
-    background: #383838 bottom right no-repeat;
-    font-weight: 300;
-    color: #FFF;
-    padding: 40px 0;
-}
-
-.footer-title {
-    color: #C89446;
-    font-weight: bold;
-    margin-bottom: 1.25em;
-    text-transform: uppercase;
-}
-
-.footer-column {
-    margin-bottom: 2rem;
-}
-
-@media only screen and (min-width: 540px) {
+    
+    *,
+    *::before,
+    *::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
     html {
         font-size: 16px;
     }
-    .logo {
-        margin-bottom: 0;
+    
+    body {
+        line-height: 1.625;
+        margin: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #6F6F6F;
     }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        -webkit-transition: color .3s;
+        -o-transition: color .3s;
+        transition: color .3s;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .header {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.92)), color-stop(39.24%, rgba(54, 54, 54, 0.5)), to(rgba(28, 28, 28, 0.4))), url(../img/eggs.jpg) center center / cover no-repeat;
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/eggs.jpg) center center / cover no-repeat;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/eggs.jpg) center center / cover no-repeat;
+        color: #FFF;
+    }
+    
     .topbar {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        max-width: 1150px;
-        margin: 0 auto;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 18px 20px;
     }
-    .baseline {
-        padding: 125px 0 230px;
-    }
-    .baseline-slogan {
-        font-size: 1.5rem;
-    }
-    .baseline-name {
-        font-size: 4.375rem;
-        letter-spacing: 12px;
-        padding-top: 8px;
-        padding-bottom: 18px;
-    }
-    .baseline-slogan {
-        font-size: 3.75rem;
-    }
-    .menu-button {
-        margin-top: 0px;
-        margin-right: 0;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    .block {
-        margin-bottom: 100px;
-    }
-    .block-last {
-        margin-bottom: 60px;
-    }
-    .block-left,
-    .block-right {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    .block-img {
-        border: none;
-        position: relative;
-    }
-    .block-img::before {
-        content: '';
-        display: block;
-        border: solid 1px #C89446;
-        position: absolute;
-        top: -30px;
-        left: -30px;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-    }
-    .block-right .block-img::before {
-        left: auto;
-        top: -30px;
-        right: -30px;
-    }
-    .block-left .block-img {
-        margin-left: 30px;
-    }
-    .block-right .block-img {
-        margin-right: 30px;
-    }
-    .block-left .block-body {
-        margin-left: 20px;
-    }
-    .block-right .block-body {
-        margin-right: 20px;
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-        order: -1;
-    }
-    .block-left .block-body,
-    .block-right .block-body {
-        width: 445px;
-        -webkit-box-flex: 0;
-        -ms-flex: none;
-        flex: none;
-    }
-    .title {
-        margin-bottom: 1.2rem;
-    }
-    .title::before {
-        margin-bottom: 10px;
-    }
-    .more {
-        display: block;
-        margin-top: 1.3rem;
-    }
-    .home-section {
-        background: fixed top 95px right 0px url(../img/oranges.jpg) no-repeat, fixed top 640px left 0px url(../img/spices.jpg) no-repeat;
-    }
-    .ingredients-menu a {
-        margin: 0 32px;
-    }
-    .menu-summary {
-        position: relative;
-        padding: 85px 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-    .menu-summary-item {
-        padding-left: 192px;
-        width: calc(50% - 40px);
-        margin-bottom: 110px;
-    }
-    .menu-summary-item:nth-child(even) {
-        text-align: right;
-        padding-left: 0;
-        padding-right: 192px;
-    }
-    .menu-summary-item:nth-child(even) .menu-summary-img {
-        left: auto;
-        right: 0;
-    }
-    .menu-summary-item:nth-child(even) .menu-summary-price {
-        margin-left: auto;
-    }
-    .menu-summary-img {
-        width: 160px;
-    }
-    .menu-summary-title {
-        margin-top: 0;
-        line-height: 1.2;
-        background: #FFF;
-    }
-    .menu-summary p {
-        background: #FFF;
-    }
-    .menu-summary-price {
-        padding-top: 4px;
-        width: 85px;
-        background: #FFF;
-    }
-    .menu-summary::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        content: '';
-        display: block;
-        width: 420px;
-        height: 420px;
-        border: solid 1px #C89446;
-        -webkit-transform: translate(-50%, -260px) rotate(45deg);
-        -ms-transform: translate(-50%, -260px) rotate(45deg);
-        transform: translate(-50%, -260px) rotate(45deg);
-    }
-    .block-chief {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin-bottom: 0;
-    }
-    .block-chief .block-img::before {
-        display: none;
-    }
-    .block-chief .block-img {
-        -webkit-box-flex: 0;
-        -ms-flex: none;
-        flex: none;
-        width: 404px;
-        -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-        order: 2;
-    }
-    .reservation {
-        padding: 100px 0;
-    }
-    .reservation-form-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        margin: 64px 0;
-    }
-    .reservation-form-row input,
-    .reservation-form-row select {
-        width: calc(33.33% - 20px);
-        margin-bottom: 0;
-    }
-    .reservation .button {
-        width: calc(33.33% - 20px);
-    }
-    .recipes {
-        padding: 60px 0;
-        background-size: 589px auto;
-        background-attachment: fixed;
-    }
-    .recipes .title {
-        text-align: right;
-    }
-    .recipes .container>p {
-        text-align: right;
-        max-width: 716px;
-        margin-left: auto;
-    }
-    .recipes-date {
-        width: 95px;
-    }
-    .recipes-list {
-        margin-top: 64px;
-        margin-bottom: 64px;
-    }
-    .recipes-list-item {
-        padding-bottom: 1.5rem;
-        margin-top: 1.5rem;
-    }
-    .recipes-list-item:last-child {
-        padding-bottom: 0;
-    }
-    .footer {
-        background-image: url(../img/splash.png);
-    }
-    .footer-columns {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-    .footer-column {
-        width: 290px;
-        margin-right: 50px;
-    }
-    .footer-column:first-child {
-        width: 450px;
-    }
-    .footer-column:last-child {
-        margin-right: 0;
-        -webkit-box-flex: 0;
-        -ms-flex: none;
-        flex: none;
-    }
-    .footer a {
-        text-decoration: underline;
-    }
-    .footer a:hover {
+    
+    .menu-item:hover {
         color: #C89446;
     }
-    .footer ul {
-        padding-left: 0;
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .menu-item {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    .baseline {
+        padding: 50px 0 70px 0;
+        text-align: center;
+        line-height: 1;
+    }
+    
+    .baseline-welcome {
+        font-family: 'Pinyon Script', sans-serif;
+        color: #C89446;
+        font-size: 2.2rem;
+        display: block;
+    }
+    
+    .baseline-name {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding-bottom: 10px;
+    }
+    
+    .baseline-slogan {
+        font-size: 1rem;
+        font-weight: 300;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .menu-button {
+        border: solid 1px #C89446;
+        padding: 7px 10px;
+        -webkit-transition-property: color, background-color;
+        -o-transition-property: color, background-color;
+        transition-property: color, background-color;
+        margin-top: 5px;
+    }
+    
+    .menu-button:hover {
+        background: #C89446;
+        color: #FFF;
+    }
+    
+    .home-section {
+        padding-top: 9px;
+    }
+    
+    .container-small {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 960px;
+    }
+    
+    .container {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1150px;
+    }
+    
+    .block {
+        margin-bottom: 50px;
+    }
+    
+    .block-img {
+        max-width: 350px;
+        margin: 0 auto;
+        border: solid 1px #C89446;
+    }
+    
+    .block-img img {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .block-centered {
+        text-align: center;
+    }
+    
+    .block-centered .block-body {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 700;
+        margin-top: 1rem 0 0 0;
+    }
+    
+    .title span {
+        display: block;
+        font-family: 'Pinyon Script', serif;
+        color: #C89446;
+        font-size: 2.5rem;
+        text-transform: none;
+    }
+    
+    .title::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background: #C89446;
+        margin-bottom: 0.5rem;
+    }
+    
+    .more {
+        color: #C89446;
+    }
+    
+    .more a::after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 9px;
+        margin-left: .7em;
+        background: url(../img/arrow-right.svg) center center no-repeat;
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        -o-transition: transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+    }
+    
+    .more a:hover {
+        text-decoration: underline;
+    }
+    
+    .more a:hover::after {
+        -webkit-transform: translateX(3px);
+        -ms-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    
+    .ingredients-menu {
+        font-weight: 600;
+        color: #383838;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 40px 0;
+    }
+    
+    .ingredients-menu a {
+        display: inline-block;
+        margin: 0 5px;
+        position: relative;
+    }
+    
+    .ingredients-menu a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        opacity: 0;
+        background: #C89446;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+    
+    .ingredients-menu .active::after,
+    .ingredients-menu a:hover::after {
+        bottom: 0;
+        opacity: 1;
+    }
+    
+    .menu-summary-item {
+        padding-left: 120px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    .menu-summary-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+    }
+    
+    .menu-summary-title {
+        font-size: 1.125rem;
+        color: #383838;
+        font-weight: 700;
+        padding-bottom: .75rem;
+        margin-bottom: 0;
+    }
+    
+    .menu-summary p {
+        margin: 0;
+        padding-bottom: 1rem;
+        font-size: .875rem;
+    }
+    
+    .menu-summary-price {
+        font-size: 2.5rem;
+        font-family: 'Pinyon Script', serif;
+        color: #C89446;
+        line-height: 1;
+    }
+    
+    .reservation {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.92)), color-stop(39.24%, rgba(54, 54, 54, 0.5)), to(rgba(28, 28, 28, 0.4))), url(../img/reservation.jpg) center center / cover no-repeat;
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/reservation.jpg) center center / cover no-repeat;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5)39.24%, rgba(28, 28, 28, 0.4)), url(../img/reservation.jpg) center center / cover no-repeat;
+        color: rgba(255, 255, 255, .6);
+        padding: 50px 0;
+    }
+    
+    .reservation .title {
+        color: #FFF;
+    }
+    
+    .reservation input,
+    .reservation select {
+        padding: 0 .5rem;
+        width: 100%;
+        margin-bottom: 15px;
+        border: solid 1px #6F6F6F;
+        background: transparent;
+        text-transform: uppercase;
+        height: 40px;
+        font-size: .875rem;
+        color: #FFF;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-transition: background-color .3s, border-color .3s;
+        -o-transition: background-color .3s, border-color .3s;
+        transition: background-color .3s, border-color .3s;
+        font-family: 'Source Sans Pro', serif;
+        border-radius: 2px;
+    }
+    
+    .reservation input:focus,
+    .reservation select:focus {
+        border-color: #C89446;
+        background-color: rgba(255, 255, 255, .1);
+    }
+    
+    .reservation select {
+        background: no-repeat right 0.5rem center url(../img/select.svg);
+    }
+    
+    .reservation .button {
+        width: 100%;
+    }
+    
+    .button {
+        font-weight: 600;
+        font-size: .875rem;
+        color: #FFF;
+        background: #C89446;
+        border: none;
+        padding: 11px 1rem;
+        border: solid 1px transparent;
+        text-transform: uppercase;
+        cursor: pointer;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+    
+    .button:hover {
+        background: transparent;
+        border: solid 1px #C89446;
+    }
+    
+    .reservation p {
+        max-width: 625px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .reservation .block-centered .block-body {
+        max-width: 825px;
+    }
+    
+    select option {
+        color: #000;
+    }
+    
+    .recipes {
+        padding: 50px 0;
+        background: no-repeat top left / 80vw auto url(../img/news-bg.jpg);
+    }
+    
+    .recipes a:hover {
+        text-decoration: underline;
+    }
+    
+    .recipes .more {
+        text-align: right;
+        display: block;
+        margin-top: 60px;
+    }
+    
+    .recipes-list {
+        font-weight: 300;
+        font-size: 1.125rem;
+        max-width: 921px;
+        margin-left: auto;
+    }
+    
+    .recipes-list strong {
+        color: #383838;
+        font-weight: 700;
+    }
+    
+    .recipes-date strong {
+        font-size: 1.75rem;
+        display: block;
+        line-height: 1.2;
+    }
+    
+    .recipes-list-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-bottom: solid 1px #F2F2F2;
+        margin-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    .recipes-list-item p {
+        margin: 0;
+    }
+    
+    .recipes-list-item:last-child {
+        border-bottom: 0;
+    }
+    
+    .recipes-date {
+        width: 60px;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        line-height: 1;
+    }
+    
+    .map {
+        width: 100%;
+        height: 460px;
+    }
+    
+    .footer {
+        background: #383838 bottom right no-repeat;
+        font-weight: 300;
+        color: #FFF;
+        padding: 40px 0;
+    }
+    
+    .footer-title {
+        color: #C89446;
+        font-weight: bold;
+        margin-bottom: 1.25em;
+        text-transform: uppercase;
+    }
+    
+    .footer-column {
+        margin-bottom: 2rem;
+    }
+    
+    .block-ingredients {
+        border: solid 1px #C89446;
+        padding: 35px 20px;
+        font-weight: 600;
+        color: #383838;
+    }
+    
+    .block-ingredients ul {
+        padding: 0;
+        margin: 0;
         list-style: none;
     }
-    .footer ul li::before {
-        content: '- ';
+    
+    .block-ingredients li {
+        padding: 5px 0;
     }
-    .footer-credit {
-        font-size: .913em;
+    
+    .block-ingredients span {
+        width: 35px;
+        text-align: right;
+        display: inline-block;
+        margin-right: 20px;
+        font-weight: 300;
     }
-    .footer-credit span {
-        font-weight: bold;
+    
+    .section-overflow {
+        padding: 20px 0;
     }
-}
+    
+    .block-video {
+        text-align: center;
+        position: relative;
+        background: #383838;
+        display: block;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .block-video img {
+        box-shadow: 0 0 30px rgba(128, 128, 128, .5);
+        opacity: .6;
+        display: block;
+        transition: opacity .3s;
+    }
+    
+    .block-video::after {
+        content: '';
+        background: url(../img/play.png) center center no-repeat;
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        top: calc(50% - 31px);
+        left: calc(50% - 31px);
+        transition: transform .3s;
+    }
+    
+    .block-video:hover::after {
+        transform: scale(1.3);
+    }
+    
+    .block-video:hover img {
+        opacity: .8;
+    }
+    
+    .recipes-mosaic p {
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
+    
+    .recipes-mosaic .more {
+        margin-top: .5rem;
+    }
+    
+    .pagination {
+        list-style: none;
+        margin: 30px 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .pagination li {
+        display: inline-block;
+    }
+    
+    .pagination a {
+        border: 1px solid #C89446;
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 7px;
+        overflow: hidden;
+        text-indent: -3000px;
+        transition: background-color .3s;
+        margin: 0 10px;
+    }
+    
+    .pagination a.active,
+    .pagination a:hover {
+        background: #C89446;
+    }
+    
+    @media only screen and (min-width: 540px) {
+        html {
+            font-size: 16px;
+        }
+        .logo {
+            margin-bottom: 0;
+        }
+        .topbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+        .baseline {
+            padding: 125px 0 230px;
+        }
+        .baseline-slogan {
+            font-size: 1.5rem;
+        }
+        .baseline-name {
+            font-size: 4.375rem;
+            letter-spacing: 12px;
+            padding-top: 8px;
+            padding-bottom: 18px;
+        }
+        .baseline-slogan {
+            font-size: 3.75rem;
+        }
+        .menu-button {
+            margin-top: 0px;
+            margin-right: 0;
+        }
+    }
+    
+    @media only screen and (min-width: 800px) {
+        .block {
+            margin-bottom: 100px;
+        }
+        .block-last {
+            margin-bottom: 60px;
+        }
+        .block-left,
+        .block-right {
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .block-img {
+            border: none;
+            position: relative;
+        }
+        .block-img::before {
+            content: '';
+            display: block;
+            border: solid 1px #C89446;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .block-right .block-img::before {
+            left: auto;
+            top: -30px;
+            right: -30px;
+        }
+        .block-left .block-img {
+            margin-left: 30px;
+        }
+        .block-right .block-img {
+            margin-right: 30px;
+        }
+        .block-left .block-body {
+            margin-left: 20px;
+        }
+        .block-right .block-body {
+            margin-right: 20px;
+            -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+            order: -1;
+        }
+        .block-left .block-body,
+        .block-right .block-body {
+            width: 445px;
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+        }
+        .title {
+            margin-bottom: 1.2rem;
+        }
+        .title::before {
+            margin-bottom: 10px;
+        }
+        .more {
+            display: block;
+            margin-top: 1.3rem;
+        }
+        .home-section {
+            background: fixed top 95px right 0px url(../img/oranges.jpg) no-repeat, fixed top 640px left 0px url(../img/spices.jpg) no-repeat;
+        }
+        .ingredients-menu a {
+            margin: 0 32px;
+        }
+        .menu-summary {
+            position: relative;
+            padding: 85px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+        .menu-summary-item {
+            padding-left: 192px;
+            width: calc(50% - 40px);
+            margin-bottom: 110px;
+        }
+        .menu-summary .menu-summary-item:nth-child(even) {
+            text-align: right;
+            padding-left: 0;
+            padding-right: 192px;
+        }
+        .menu-summary .menu-summary-item:nth-child(even) .menu-summary-img {
+            left: auto;
+            right: 0;
+        }
+        .menu-summary-item:nth-child(even) .menu-summary-price {
+            margin-left: auto;
+        }
+        .menu-summary-img {
+            width: 160px;
+        }
+        .menu-summary-title {
+            margin-top: 0;
+            line-height: 1.2;
+            background: #FFF;
+        }
+        .menu-summary p {
+            background: #FFF;
+        }
+        .menu-summary-price {
+            padding-top: 4px;
+            width: 85px;
+            background: #FFF;
+        }
+        .menu-summary::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: '';
+            display: block;
+            width: 420px;
+            height: 420px;
+            border: solid 1px #C89446;
+            -webkit-transform: translate(-50%, -260px) rotate(45deg);
+            -ms-transform: translate(-50%, -260px) rotate(45deg);
+            transform: translate(-50%, -260px) rotate(45deg);
+        }
+        .block-chief {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        .block-chief .block-img::before {
+            display: none;
+        }
+        .block-chief .block-img {
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            width: 404px;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+        }
+        .reservation {
+            padding: 100px 0;
+        }
+        .reservation-form-row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin: 64px 0;
+        }
+        .reservation-form-row input,
+        .reservation-form-row select {
+            width: calc(33.33% - 20px);
+            margin-bottom: 0;
+        }
+        .reservation .button {
+            width: calc(33.33% - 20px);
+        }
+        .recipes {
+            padding: 60px 0;
+            background-size: 589px auto;
+            background-attachment: fixed;
+        }
+        .recipes .title {
+            text-align: right;
+        }
+        .recipes .container>p {
+            text-align: right;
+            max-width: 716px;
+            margin-left: auto;
+        }
+        .recipes-date {
+            width: 95px;
+        }
+        .recipes-list {
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+        .recipes-list-item {
+            padding-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .recipes-list-item:last-child {
+            padding-bottom: 0;
+        }
+        .footer {
+            background-image: url(../img/splash.png);
+        }
+        .footer-columns {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+        .footer-column {
+            width: 290px;
+            margin-right: 50px;
+        }
+        .footer-column:first-child {
+            width: 450px;
+        }
+        .footer-column:last-child {
+            margin-right: 0;
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+        }
+        .footer a {
+            text-decoration: underline;
+        }
+        .footer a:hover {
+            color: #C89446;
+        }
+        .footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        .footer ul li::before {
+            content: '- ';
+        }
+        .footer-credit {
+            font-size: .913em;
+        }
+        .footer-credit span {
+            font-weight: bold;
+        }
+        .block-ingredients span {
+            width: 35px;
+            margin-right: 50px;
+        }
+        .block-ingredients {
+            padding: 35px 40px;
+            width: 350px;
+        }
+        .block-ingredients li {
+            padding: 10px 0;
+        }
+        .section-overflow {
+            padding: 0;
+            margin-top: -20px;
+        }
+        .block-right .block-video {
+            margin-left: 28px;
+        }
+        .recipes-mosaic {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: -60px;
+        }
+        .recipes-mosaic .menu-summary-item {
+            width: calc(50% - 25px);
+        }
+        .recipes-mosaic .menu-summary-item {
+            margin-bottom: 60px;
+            font-size: .875rem;
+            padding-left: 150px;
+        }
+        .recipes-mosaic .menu-summary-img {
+            width: 125px;
+        }
+        .pagination {
+            margin: 60px 0;
+        }
+    }
